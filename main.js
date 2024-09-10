@@ -12,7 +12,8 @@ cardBlue.addEventListener("mousedown", mouseBlueDown);
 cardYellow.addEventListener("mousedown", mouseYellowDown);
 
 
-// Down Function
+
+// Down Function (starts when the mouse is pressed down)
 
 //Blue card
 function mouseBlueDown(e) {
@@ -26,8 +27,8 @@ function mouseBlueDown(e) {
 
 //Yellow card
 function mouseYellowDown(e) {
-  startX = e.clientX - 10px;
-  startY = e.clientY - 10;
+  startX = e.clientX;
+  startY = e.clientY;
   
   document.addEventListener("mousemove", mouseYellowMove);
   document.addEventListener("mouseup", mouseYellowUp);
@@ -36,7 +37,7 @@ function mouseYellowDown(e) {
 
 
 
-// Move Function
+// Move Function (starts on mouse move)
 
 // Blue card
 function mouseBlueMove(e) {
@@ -63,7 +64,7 @@ function mouseYellowMove(e) {
 }
 
 
-//Up function
+//Up function (starts when the mouse is depressed)
 
 //Blue card
 function mouseBlueUp(e) {
@@ -79,6 +80,6 @@ function mouseYellowUp(e) {
 
 
 
-//Lock pic
+//Lock pic (when the user drags the card from the picture)
 document.getElementById("profile_pic").setAttribute("draggable", false);
 
