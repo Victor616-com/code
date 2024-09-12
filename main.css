@@ -1,6 +1,13 @@
 
 /* I'm gonna change the code to use grid intead of flex-box but the principle is the same */
-/* The problem is on line  171 */
+/* The problem is on line  62 */
+
+:root {
+  --background-color-blueCard: rgb(216, 247, 255);
+  --background-color-yellowCard: rgb(245, 253, 119);
+  --card-height: 260px;
+  --card-width: 430px;
+}
 
 
 body {
@@ -25,17 +32,10 @@ a {
   src: url(resources/Eskool-Regular.ttf);
 }
 
-#p1 {
-  font-family: "CustomFont";
-  font-size: 32px;
-  margin: 0;
-  letter-spacing: 3.5px;
-}
-
 #cardBlue {
-  width: 430px;
-  height: 260px;
-  background-color: rgb(216, 247, 255);
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--background-color-blueCard);
   border-radius: 20px;
   border: 2px solid black;
   padding: 30px;
@@ -47,6 +47,32 @@ a {
   -webkit-box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
   box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
 }
+
+#cardYellow {
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--background-color-yellowCard);
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 30px;
+  position: fixed;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: translate(10px, 10px); /*   here is the problem    */
+  z-index: 3;
+  -webkit-box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+  box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+}
+
+#p1 {
+  font-family: "CustomFont";
+  font-size: 32px;
+  margin: 0;
+  letter-spacing: 3.5px;
+}
+
+
 #Hi_section {
   display: flex;
   flex-direction: row-reverse;
@@ -157,19 +183,4 @@ a {
   }
 }
 
-#cardYellow {
-  width: 430px;
-  height: 260px;
-  background-color: rgb(245, 253, 119);
-  border-radius: 20px;
-  border: 2px solid black;
-  padding: 30px;
-  position: fixed;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  transform: translate(10px, 10px); /*   here is the problem    */
-  z-index: 3;
-  -webkit-box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
-  box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
-}
+
